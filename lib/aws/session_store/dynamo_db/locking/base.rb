@@ -112,7 +112,7 @@ module AWS::SessionStore::DynamoDB::Locking
 
     # Update client with current time attribute.
     def updated_at
-      { value: { N: Time.now.to_f.to_s }, action: 'PUT' }
+      { value: { S: Time.now.to_f.to_s }, action: 'PUT' }
     end
 
     # Attribute for creation of session.
